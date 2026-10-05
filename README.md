@@ -4,11 +4,12 @@ An independent Squarespace setup guide project maintained by Waypoint. It is not
 
 ## Project status
 
-**Guide research only; no payment plugin is available.** Squarespace documents that its Commerce API cannot connect a third-party payment processor. Any future guide would cover only a WiPay-confirmed manual/off-platform payment workflow and would require merchants to reconcile payments with orders themselves.
+**Guide only; no Squarespace payment plugin is available.** Squarespace documents that its Commerce API cannot connect a third-party payment processor. The guide covers a WiPay hosted-checkout sandbox test through a separate backend and a manually reconciled, off-platform workflow. It does not add WiPay to Squarespace checkout or automatically update Squarespace orders.
 
-## Research
+## Guide and research
 
-See [PLATFORM-RESEARCH.md](PLATFORM-RESEARCH.md) for the documented platform limitation, questions, and official references.
+- Read [GUIDE.md](GUIDE.md) for sandbox steps, security boundaries, and manual reconciliation.
+- See [PLATFORM-RESEARCH.md](PLATFORM-RESEARCH.md) for feasibility notes and official platform references.
 
 ## Ownership and disclaimer
 
