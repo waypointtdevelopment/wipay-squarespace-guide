@@ -4,7 +4,7 @@ An independent Squarespace setup guide project maintained by Waypoint. It is not
 
 ## Project status
 
-**Guide only; no Squarespace payment plugin is available.** Squarespace documents that its Commerce API cannot connect a third-party payment processor. The guide covers a WiPay hosted-checkout sandbox test through a separate backend and a manually reconciled, off-platform workflow. It does not add WiPay to Squarespace checkout or automatically update Squarespace orders.
+**Guide complete (2026-10-13) — reviewed against live Squarespace docs.** No Squarespace payment plugin is possible: Squarespace Payments and Stripe are unavailable to TT/JM/BB/GY/GD merchants, checkout cannot be extended (no custom gateway, no code injection, and the Commerce API cannot mark orders paid — no PATCH on `paymentState`). [GUIDE.md](GUIDE.md) is the working answer: Squarespace runs the storefront, WiPay takes payment via hosted checkout (the same live-sandbox-verified contract as Waypoint's WP/Magento/OpenCart/Shopify work), and orders reconcile through a verified checklist — manual by necessity, with the automation ceiling documented honestly.
 
 ## Guide and research
 
