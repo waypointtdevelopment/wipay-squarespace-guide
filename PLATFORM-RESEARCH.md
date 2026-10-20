@@ -2,9 +2,10 @@
 
 ## Status
 
-**Guide-only; reviewed 2026-10-13 and re-verified against live Squarespace docs 2026-10-19.** No WiPay
-payment plugin is possible on Squarespace. [GUIDE.md](GUIDE.md) is the deliverable: an offsite workflow
-built on the same WiPay contract that is live-sandbox-verified across Waypoint's WordPress, Magento,
+**Guide + working offsite backend; reviewed 2026-10-13 and re-verified against live Squarespace docs 2026-10-19/20.** No WiPay
+payment plugin is possible on Squarespace. [GUIDE.md](GUIDE.md) documents the offsite workflow, and
+[prototype/](prototype/) implements it as a running server (e2e 121/121, live-sandbox probed) — built on the same WiPay
+contract that is live-sandbox-verified across Waypoint's WordPress, Magento,
 OpenCart, Shopify and Wix work.
 
 ## Verdict

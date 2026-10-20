@@ -39,6 +39,10 @@ make that safe, professional, and low-friction.
    - (b) a small merchant-controlled page/backend (not on Squarespace) takes
      the order details and creates a WiPay Payment Request server-side —
      this is the cleaner path and what Waypoint's other modules do.
+     **This is now implemented:** [prototype/](prototype/) is that backend —
+     pinned amounts, verified returns, HMAC webhooks, automatic Squarespace
+     order-record creation, and a reconcile report of everything still
+     needing the manual mark-paid. e2e 121/121, live-sandbox probed.
 3. **WiPay hosted page.** The buyer enters card details only on
    `*.wipayfinancial.com`. Your store never touches card data.
 4. **Verify server-side, never from the redirect.** On return, recompute
@@ -60,6 +64,13 @@ make that safe, professional, and low-friction.
    read-only with no PATCH, and Squarespace's webhooks cover order
    create/update only (no external-payment-success event). So automate the
    record, then mark paid by hand, every time.
+
+   The prototype automates exactly this: webhook settlement triggers
+   `POST /1.0/commerce/orders` (with `Idempotency-Key`, `channelName`,
+   `externalOrderReference` as the audit key — and deliberately **no**
+   `paymentState`, which is not an accepted create field), then
+   `GET /admin/reconcile` lists every synced order still not `PAID` as
+   `needs_mark_paid`, each with its WiPay transaction id.
 
 ## Sandbox walkthrough
 
